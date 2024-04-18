@@ -159,7 +159,6 @@ computeLambdaExpr expr =
             case e1 of
                 Term x -> App e1 (compute' e2 redex)
                 App _ _ -> App (compute' e1 redex) (compute' e2 redex)
-                _ -> compute' (App e1 e2) redex
     in
         if isNothing redex
             then expr -- normal form has been reached
