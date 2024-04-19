@@ -4,7 +4,7 @@ build:
 	ghc Main.hs -o main -O2
 
 run:
-	./main $(mode)
+	./main
 
 .PHONY: clean
 clean:
