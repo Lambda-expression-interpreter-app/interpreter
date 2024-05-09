@@ -2,7 +2,6 @@
 
 module Main where
 
--- import Debug.Trace
 import Interpreter
 
 import Data.Text.Lazy as Text (Text, pack, unpack)
