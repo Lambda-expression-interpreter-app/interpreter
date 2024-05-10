@@ -14,7 +14,7 @@ import Web.Scotty
 
 main :: IO ()
 main = do
-    scotty 8000 $ do
+    scotty 8001 $ do
         post "/interpreter" $ do
             authHeader <- header "Authorization"
             case authHeader of
