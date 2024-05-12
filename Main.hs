@@ -22,4 +22,6 @@ main = do
                     text "Unauthorized access"
                 Just _ -> do
                     input <- body
-                    text $ pack $ show $ evalLambdaExpr (BL.toString input)
+                    let result = show $ evalLambdaExpr (BL.toString input)
+                        message = if result == BL.toString input then "The lambda expression " ++ result ++ " loops infinitely." else "Result: " ++ result
+                    text $ pack message
