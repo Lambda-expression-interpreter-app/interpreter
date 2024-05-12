@@ -53,7 +53,7 @@ nextToken str =
             | otherwise -> []
 
 parseLambdaExpr :: String -> LambdaExpr
-parseLambdaExpr [] = undefined
+parseLambdaExpr [] = Term ""
 parseLambdaExpr str@(h : t) =
     case h of
         '(' -> let
